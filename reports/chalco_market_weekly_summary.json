@@ -1,0 +1,9 @@
+{
+  "company": "chalco",
+  "frequency": "weekly",
+  "rows": 154,
+  "initial_training_weeks": 52,
+  "out_of_sample_weeks": 102,
+  "r2": 0.7710367363519728,
+  "mae": 0.7758299044540339
+}

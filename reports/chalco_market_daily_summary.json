@@ -1,0 +1,10 @@
+{
+  "company": "chalco",
+  "frequency": "daily",
+  "rows": 726,
+  "initial_training_days": 252,
+  "out_of_sample_days": 474,
+  "ridge_alpha": 4.641588833612772,
+  "r2": 0.8515780188285661,
+  "mae": 0.6389201336868927
+}

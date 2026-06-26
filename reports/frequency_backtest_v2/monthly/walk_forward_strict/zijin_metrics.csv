@@ -1,0 +1,2 @@
+﻿n,start_date,end_date,latest_actual,latest_model_price,latest_gap,mae,rmse,mape,r2,corr,within_10pct,within_15pct,blocked_months,usable_months,undervalued_periods,neutral_periods,overvalued_periods
+22,2024-08-31,2026-05-31,30.44,30.692782537385263,-0.008235895102614466,3.057998479264065,3.6896603741852654,0.12588303452893157,0.800691398847791,0.9588869482640133,0.2727272727272727,0.5909090909090909,50,22,1,7,14

@@ -1,0 +1,2 @@
+﻿n,start_date,end_date,latest_actual,latest_model_price,latest_gap,mae,rmse,mape,r2,corr,within_10pct,within_15pct,undervalued_periods,neutral_periods,overvalued_periods,status
+0,,,,,,,,,,,,,0,0,0,V2 strict unavailable

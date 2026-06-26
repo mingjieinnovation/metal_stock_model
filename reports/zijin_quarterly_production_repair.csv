@@ -1,0 +1,6 @@
+﻿code,period,source_pdf,source_title,extracted_cu_raw,extracted_cu_unit,cu_ton,extracted_au_raw,extracted_au_unit,au_kg,anchor_cu_ton,anchor_au_kg,cu_anchor_diff_pct,au_anchor_diff_pct,parse_confidence,strict_usable,proxy_usable,parse_warning
+601899,2023Q1,reports\601899\2023\601899_2023Q1.pdf,紫金矿业集团股份有限公司2023年第一季度报告,"244,471",吨,244471.0,"15,952",千克,15952.0,249699.0,15952.0,0.02093720839891229,0.0,0.8999999999999999,True,False,
+601899,2023Q3,reports\601899\2023\601899_2023Q3.pdf,紫金矿业集团股份有限公司2023年第三季度报告,"754,248",吨,754248.0,"50,091",千克,50091.0,754000.0,50000.0,0.0003289124668435013,0.00182,0.8999999999999999,False,False,CUMULATIVE_DATA_NEEDS_QUARTER_CONVERSION
+601899,2024Q1,reports\601899\2024\601899_2024Q1.pdf,紫金矿业集团股份有限公司2024年第一季度报告,"262,649",吨,262649.0,"16,805",千克,16805.0,262649.0,16805.0,0.0,0.0,0.8999999999999999,True,False,
+601899,2024Q3,reports\601899\2024\601899_2024Q3.pdf,紫金矿业集团股份有限公司2024年第三季度报告,"789,459",吨,789459.0,"54,265",千克,54265.0,,,,,0.7,False,False,CUMULATIVE_DATA_NEEDS_QUARTER_CONVERSION
+601899,2025Q1,reports\601899\2025\601899_2025Q1.pdf,紫金矿业集团股份有限公司2025年第一季度报告,"287,571",吨,287571.0,"19,065",千克,19065.0,,,,,0.7,True,False,

@@ -1,0 +1,12 @@
+﻿data_item,company,priority,current_status,source_type,is_proxy,is_blocking_model,blocked_model,required_for_signal_upgrade,next_action
+原铝/电解铝产量,中国铝业,最高,缺失,BLOCKED,False,True,Model J,需要严格季度产量,下载并解析中铝季报 PDF
+氧化铝外销量,中国铝业,最高,缺失,BLOCKED,False,True,Model J,需要严格季度外销量,下载并解析中铝季报 PDF
+区域电价,中国铝业,高,缺少付费数据,BLOCKED,False,True,Model I,真实电价,配置 SMM/Mysteel/Baichuan token
+预焙阳极,中国铝业,高,缺少付费数据,BLOCKED,False,True,Model I,真实阳极价格,配置 SMM/Mysteel/Baichuan token
+动力煤,中国铝业,中,缺少付费数据,BLOCKED,False,False,,成本分解,配置付费数据 token
+2020-2023氧化铝现货,中国铝业,中,AO期货上市前缺口,BLOCKED,False,False,历史扩样,真实现货历史,配置 SMM/Baichuan 历史数据
+10Y真实利率 DFII10,紫金矿业,高,等待 FRED key,BLOCKED,True,False,需求分数,降低代理占比,配置 FRED_API_KEY
+美元指数,紫金矿业,高,已接入,API,True,False,需求分数,降低代理占比,配置 FRED_API_KEY
+黄金 ETF,紫金矿业,高,缺失,BLOCKED,True,False,需求分数,降低代理占比,配置 WGC_COOKIE
+铜库存,紫金矿业,中,公开 API 已接入，历史窗口不足,API,True,False,需求分数,形成可靠滚动分位,持续累积可审计历史
+海外风险折扣,紫金矿业,中,缺少结构化真实来源,BLOCKED,True,False,需求分数,事件风险因子,确认可审计事件数据源

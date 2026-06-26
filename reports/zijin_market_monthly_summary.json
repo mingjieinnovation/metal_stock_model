@@ -1,0 +1,9 @@
+{
+  "company": "zijin",
+  "frequency": "monthly",
+  "rows": 73,
+  "out_of_sample_months": 49,
+  "r2": 0.9382325256368604,
+  "mae": 1.452013264083627,
+  "price_adjustment_required": "none"
+}

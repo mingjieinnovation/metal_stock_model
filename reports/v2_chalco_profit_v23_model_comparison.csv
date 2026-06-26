@@ -1,0 +1,4 @@
+﻿model,status,n,full_sample_r2,walk_forward_oos_r2,ttm_r2,quarterly_r2,mae,mape,bias,directional_accuracy,signal_sample_count,latest_model_price,signal_status
+H_dynamic_k_spread,ok,6,0.9693118844606254,0.0908612738212623,-1.8247977792456602,0.0908612738212623,9.04830887059337,0.2817347388033497,-3.7608098174126003,0.8333333333333334,0,8.31442440429248,research_only_or_valuation_anchor_only
+I_power_adjusted_spread,ok,6,0.9693118844606254,0.0908612738212623,-1.8247977792456602,0.0908612738212623,9.04830887059337,0.2817347388033497,-3.7608098174126003,0.8333333333333334,0,,
+J_segment_profit_proxy,blocked_missing_strict_primary_al_volume_and_alumina_external_sales,0,,,,,,,,,0,,

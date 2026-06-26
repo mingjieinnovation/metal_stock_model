@@ -1,0 +1,10 @@
+{
+  "company": "zijin",
+  "frequency": "daily",
+  "rows": 1450,
+  "initial_training_days": 252,
+  "out_of_sample_days": 1198,
+  "ridge_alpha": 46.41588833612773,
+  "r2": 0.9536988505756969,
+  "mae": 1.1882805826336271
+}

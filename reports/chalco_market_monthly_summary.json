@@ -1,0 +1,9 @@
+{
+  "company": "chalco",
+  "frequency": "monthly",
+  "rows": 37,
+  "out_of_sample_months": 13,
+  "r2": 0.4453203156258777,
+  "mae": 1.4645112450038023,
+  "price_adjustment_required": "none"
+}

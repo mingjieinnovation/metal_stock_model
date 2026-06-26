@@ -1,0 +1,12 @@
+﻿__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.pytest_cache/
+.cache/
+
+# Runtime artifacts are intentionally local. Public portfolio commits contain
+# reproducible code and documentation, not downloaded market data or models.
+data/
+models/

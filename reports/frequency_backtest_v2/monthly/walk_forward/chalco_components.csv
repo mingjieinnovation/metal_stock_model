@@ -1,0 +1,2 @@
+﻿trade_date,frequency,mode,company,model_version,actual_stock_close_raw,model_price,gap,signal,q_profit_pred_bn,annual_profit_pred_bn,eps_pred,target_pe,demand_score,is_q4,data_quality_flag
+,monthly,walk_forward,chalco,v2_fundamental_valuation_model,,,,,,,,,,,V2 strict pending: inventory and demand proxies require explicit API sources; proxy defaults are not strict observations

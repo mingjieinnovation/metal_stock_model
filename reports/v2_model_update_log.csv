@@ -1,0 +1,16 @@
+﻿run_date,run_type,updated_data,api_success_count,api_failed_count,cache_used_count,fallback_used_count,default_proxy_count,blocked_count,models_retrained,zijin_signal,chalco_price_zone,chalco_signal_status,notes
+2026-06-22T22:59:53+00:00,validation,市场/宏观/报告按本次任务状态更新,10,3,4,0,7,0,False,valuation_observation,fair_value_zone,valuation_anchor_only,日常生产任务不重训；API 失败状态保留并显式记录。
+2026-06-22T23:02:57+00:00,validation,市场/宏观/报告按本次任务状态更新,10,4,4,0,7,1,False,valuation_observation,fair_value_zone,valuation_anchor_only,日常生产任务不重训；API 失败状态保留并显式记录。
+2026-06-22T23:03:56+00:00,validation,市场/宏观/报告按本次任务状态更新,10,4,4,0,7,1,False,valuation_observation,fair_value_zone,valuation_anchor_only,日常生产任务不重训；API 失败状态保留并显式记录。
+2026-06-22T23:05:38+00:00,daily_validation,市场/宏观/报告按本次任务状态更新,15,4,10,0,7,1,False,valuation_observation,fair_value_zone,valuation_anchor_only,日常生产任务不重训；API 失败状态保留并显式记录。
+2026-06-22T23:08:19+00:00,validation,市场/宏观/报告按本次任务状态更新,15,4,10,0,7,1,False,valuation_observation,fair_value_zone,valuation_anchor_only,日常生产任务不重训；API 失败状态保留并显式记录。
+2026-06-22T23:11:20+00:00,final_validation,市场/宏观/报告按本次任务状态更新,15,4,10,0,7,1,False,unavailable,unavailable,unavailable,日常生产任务不重训；API 失败状态保留并显式记录。
+2026-06-23T10:33:16+00:00,manual,市场/宏观/报告按本次任务状态更新,15,4,11,0,7,1,False,unavailable,unavailable,unavailable,日常生产任务不重训；API 失败状态保留并显式记录。
+2026-06-23T20:56:04+00:00,manual,市场/宏观/报告按本次任务状态更新,15,4,11,0,7,1,False,unavailable,unavailable,unavailable,日常生产任务不重训；API 失败状态保留并显式记录。
+2026-06-23T21:05:25+00:00,manual,市场/宏观/报告按本次任务状态更新,15,4,4,0,7,1,False,unavailable,unavailable,unavailable,日常生产任务不重训；API 失败状态保留并显式记录。
+2026-06-24T10:34:30+00:00,manual,市场/宏观/报告按本次任务状态更新,16,3,3,0,7,1,False,unavailable,unavailable,unavailable,日常生产任务不重训；API 失败状态保留并显式记录。
+2026-06-25T08:53:30+00:00,manual,市场/宏观/报告按本次任务状态更新,16,3,4,0,7,1,False,unavailable,unavailable,unavailable,日常生产任务不重训；API 失败状态保留并显式记录。
+2026-06-25T08:54:44+00:00,manual,市场/宏观/报告按本次任务状态更新,16,3,4,0,7,1,False,valuation_observation,fair_value_zone,valuation_anchor_only,日常生产任务不重训；API 失败状态保留并显式记录。
+2026-06-26T12:09:22+00:00,manual,市场/宏观/报告按本次任务状态更新,16,3,4,0,7,1,False,valuation_observation,fair_value_zone,valuation_anchor_only,日常生产任务不重训；API 失败状态保留并显式记录。
+2026-06-26T12:14:04+00:00,automation_daily_market,市场/宏观/报告按本次任务状态更新,16,3,4,0,7,1,False,valuation_observation,fair_value_zone,valuation_anchor_only,日常生产任务不重训；API 失败状态保留并显式记录。
+2026-06-26T12:19:46+00:00,automation_daily_market,市场/宏观/报告按本次任务状态更新,16,3,4,0,7,1,False,valuation_observation,fair_value_zone,valuation_anchor_only,日常生产任务不重训；API 失败状态保留并显式记录。

@@ -1,0 +1,9 @@
+{
+  "company": "zijin",
+  "frequency": "weekly",
+  "rows": 307,
+  "initial_training_weeks": 52,
+  "out_of_sample_weeks": 255,
+  "r2": 0.9498959084770163,
+  "mae": 1.2526255481458248
+}

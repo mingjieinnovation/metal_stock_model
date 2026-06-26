@@ -1,0 +1,13 @@
+﻿company,frequency,mode,n,status
+chalco,daily,full_sample,0,V2 strict pending: inventory and demand proxies require explicit API sources; proxy defaults are not strict observations
+zijin,daily,full_sample,0,V2 strict unavailable
+chalco,daily,walk_forward,0,V2 strict pending: inventory and demand proxies require explicit API sources; proxy defaults are not strict observations
+zijin,daily,walk_forward,0,V2 strict unavailable
+chalco,weekly,full_sample,0,V2 strict pending: inventory and demand proxies require explicit API sources; proxy defaults are not strict observations
+zijin,weekly,full_sample,0,V2 strict unavailable
+chalco,weekly,walk_forward,0,V2 strict pending: inventory and demand proxies require explicit API sources; proxy defaults are not strict observations
+zijin,weekly,walk_forward,0,V2 strict unavailable
+chalco,monthly,full_sample,0,V2 strict pending: inventory and demand proxies require explicit API sources; proxy defaults are not strict observations
+zijin,monthly,full_sample,0,V2 strict unavailable
+chalco,monthly,walk_forward,0,V2 strict pending: inventory and demand proxies require explicit API sources; proxy defaults are not strict observations
+zijin,monthly,walk_forward,0,V2 strict unavailable

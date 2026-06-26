@@ -1,0 +1,4 @@
+﻿signal,n_total,avg_gap,avg_fwd_1d_return,hit_fwd_1d,avg_fwd_3d_return,hit_fwd_3d,avg_fwd_6d_return,hit_fwd_6d
+undervalued,0,,,,,,,
+neutral,0,,,,,,,
+overvalued,0,,,,,,,

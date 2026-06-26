@@ -1,0 +1,3 @@
+﻿model,n,mae,mape,bias,walk_forward_oos_r2,directional_accuracy,latest_model_price,signal_status
+A_strict_cu_au_revenue,7,10.034712523882243,0.07346529757184057,-2.4953625443152867,0.9005348524346823,0.7142857142857143,31.14328894640177,research_only_or_valuation_anchor_only
+B_strict_revenue_profit_anchor,7,12.25832476112598,0.10469624679015699,-4.858312434088475,0.8722917042782039,0.7142857142857143,,comparison_only
