@@ -1,1 +1,81 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Metal Stock Model — 面向中国金属股的可审计研究与数据质量监控项目。"><title>Metal Stock Model | Research Portfolio</title><style>:root{--ink:#112028;--muted:#60717a;--paper:#f4f1e9;--panel:#fffdf8;--accent:#ec6b3d;--teal:#087e8b;--line:#d8d3c7}*{box-sizing:border-box}body{margin:0;color:var(--ink);background:var(--paper);font-family:Inter,system-ui,"PingFang SC","Microsoft YaHei",sans-serif}.shell{max-width:1120px;margin:auto;padding:28px}nav{display:flex;justify-content:space-between;align-items:center;font-size:.9rem;letter-spacing:.04em;text-transform:uppercase}.brand{font-weight:800}.dot,.number{color:var(--accent)}.tag{border:1px solid var(--ink);border-radius:99px;padding:7px 12px}header{display:grid;grid-template-columns:1.25fr .75fr;gap:42px;padding:88px 0 64px;align-items:end}h1{font-size:clamp(3rem,8vw,6.8rem);line-height:.88;margin:0;letter-spacing:-.075em}h1 em,.principle{font-family:Georgia,serif;font-weight:400;color:var(--teal)}.intro,.card p{font-size:1.1rem;line-height:1.7;color:var(--muted);margin:0}.rule{border:0;border-top:1px solid var(--ink)}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;padding:26px 0 68px}.card{background:var(--panel);border:1px solid var(--line);padding:24px;min-height:200px}.card h2,.flow h2{font-size:1rem;text-transform:uppercase;letter-spacing:.07em;margin:0 0 36px}.wide{grid-column:span 6}.third{grid-column:span 4}.number{font-size:3.3rem;line-height:1;font-weight:750;letter-spacing:-.08em;margin-bottom:16px}.flow{grid-column:span 12;background:var(--ink);color:#fbf8ef;padding:28px}.flow h2{color:#b9c7c8;margin-bottom:25px}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.step{border-top:1px solid #557075;padding-top:13px}.step b{display:block;margin-bottom:7px}.step span{color:#b9c7c8;font-size:.9rem;line-height:1.5}.principle{grid-column:span 12;border-left:6px solid var(--accent);padding:8px 0 8px 22px;font-size:clamp(1.5rem,3vw,2.3rem);line-height:1.3;color:var(--ink)}footer{border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;padding:25px 0 12px;color:var(--muted);font-size:.9rem}@media(max-width:700px){.shell{padding:20px}header{grid-template-columns:1fr;padding:58px 0 44px;gap:24px}.wide,.third{grid-column:span 12}.steps{grid-template-columns:1fr 1fr}footer{display:block}}</style></head><body><main class="shell"><nav><span class="brand">Metal Stock Model<span class="dot">.</span></span><span class="tag">Research portfolio</span></nav><header><h1>可审计的<br><em>金属股</em><br>研究管道。</h1><p class="intro">一个覆盖中国铝业与紫金矿业的研究自动化项目。重点不是制造交易建议，而是将数据来源、可见性、时效和缺口明确地留在每一份研究输出中。</p></header><hr class="rule"><section class="grid"><article class="card wide"><h2>研究范围</h2><p>将股票价格、期货、宏观指标、财务披露与生产运营数据纳入同一条可复现的处理链路，输出估值锚点、偏离报警与数据质量审计。</p></article><article class="card wide"><h2>输出边界</h2><p>质量门禁未通过时，输出自动降级为 valuation、observation 或 alert。项目不把默认代理数据包装为真实观测，也不从日报生成可交易信号。</p></article><article class="card third"><div class="number">3×</div><p>数据来源优先级：API、可追溯缓存、受限 fallback。</p></article><article class="card third"><div class="number">0</div><p>公开仓库中的原始市场数据与模型权重；二者均在本地忽略。</p></article><article class="card third"><div class="number">FRESH</div><p>日报将数据日期与陈旧度直接展示，缓存数据会被明确标注。</p></article><section class="flow"><h2>从数据到研究输出</h2><div class="steps"><div class="step"><b>01 — Acquire</b><span>抓取市场、期货、宏观与披露数据。</span></div><div class="step"><b>02 — Audit</b><span>记录来源、时效、缺失率与解析置信度。</span></div><div class="step"><b>03 — Evaluate</b><span>构建研究特征并生成估值区间。</span></div><div class="step"><b>04 — Guardrail</b><span>质量门禁决定输出可用边界。</span></div></div></section><p class="principle">“宁可标记为 CACHE 或 BLOCKED，也不以缺失数据伪造确定性。”</p></section><footer><p>Built for transparent, reproducible equity research.</p><p>Python · pandas · audit-first pipeline</p></footer></main></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Metal Stock Model is an audit-first research pipeline for Chinese metals equities, covering Chalco and Zijin Mining.">
+  <title>Metal Stock Model | Audit-first equity research demo</title>
+  <style>
+    :root{--ink:#102027;--muted:#60717a;--paper:#f5f0e7;--panel:#fffdf8;--accent:#ec6b3d;--teal:#087e8b;--line:#d9d2c5;--soft:#ebe5d8}
+    *{box-sizing:border-box} body{margin:0;color:var(--ink);background:var(--paper);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.shell{max-width:1160px;margin:auto;padding:28px}
+    nav{display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:.88rem;letter-spacing:.05em;text-transform:uppercase}.brand{font-weight:850}.dot,.number{color:var(--accent)}.tag{border:1px solid var(--ink);border-radius:99px;padding:7px 12px;white-space:nowrap}
+    header{display:grid;grid-template-columns:1.2fr .8fr;gap:44px;padding:82px 0 56px;align-items:end}h1{font-size:clamp(3rem,7vw,6.4rem);line-height:.9;margin:0;letter-spacing:-.075em}h1 em,.principle{font-family:Georgia,serif;font-weight:400;color:var(--teal)}.intro{font-size:1.12rem;line-height:1.75;color:var(--muted);margin:0}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.button{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--ink);background:var(--ink);color:#fff;text-decoration:none;border-radius:999px;padding:11px 16px;font-weight:700}.button.secondary{background:transparent;color:var(--ink)}
+    .rule{border:0;border-top:1px solid var(--ink)}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;padding:26px 0 68px}.card{background:var(--panel);border:1px solid var(--line);padding:24px;min-height:190px}.card h2,.flow h2{font-size:.95rem;text-transform:uppercase;letter-spacing:.08em;margin:0 0 28px}.card p,.card li{font-size:1rem;line-height:1.65;color:var(--muted)}.card p{margin:0}.wide{grid-column:span 6}.third{grid-column:span 4}.full{grid-column:span 12}.number{font-size:3rem;line-height:1;font-weight:800;letter-spacing:-.08em;margin-bottom:16px}.flow{grid-column:span 12;background:var(--ink);color:#fbf8ef;padding:28px}.flow h2{color:#b9c7c8}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.step{border-top:1px solid #557075;padding-top:13px}.step b{display:block;margin-bottom:7px}.step span{color:#b9c7c8;font-size:.9rem;line-height:1.5}.principle{grid-column:span 12;border-left:6px solid var(--accent);padding:8px 0 8px 22px;font-size:clamp(1.45rem,3vw,2.25rem);line-height:1.32;color:var(--ink)}
+    table{width:100%;border-collapse:collapse;background:var(--panel);font-size:.95rem}th,td{border:1px solid var(--line);padding:12px;text-align:left;vertical-align:top}th{background:var(--soft);font-size:.8rem;text-transform:uppercase;letter-spacing:.06em}.links a{color:var(--teal);font-weight:750;text-decoration:none}.links a:hover{text-decoration:underline}.warning{background:#fff8ea;border:1px solid #f0cf8b;border-radius:14px;padding:14px;color:#6b4a00;line-height:1.55}footer{border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;padding:25px 0 12px;color:var(--muted);font-size:.9rem}
+    @media(max-width:760px){.shell{padding:20px}header{grid-template-columns:1fr;padding:58px 0 44px;gap:24px}.wide,.third{grid-column:span 12}.steps{grid-template-columns:1fr 1fr}footer{display:block}}
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <nav><span class="brand">Metal Stock Model<span class="dot">.</span></span><span class="tag">Audit-first research demo</span></nav>
+    <header>
+      <div>
+        <h1>Transparent<br><em>metals equity</em><br>research.</h1>
+        <div class="actions">
+          <a class="button" href="README.en.md">Read the English overview</a>
+          <a class="button secondary" href="docs/demo_guide.md">How to demo it</a>
+        </div>
+      </div>
+      <p class="intro">A Python research pipeline for Chalco and Zijin Mining. The project combines market prices, commodity futures, macro proxies, financial disclosures, production data and quality gates into reproducible valuation and monitoring reports.</p>
+    </header>
+
+    <hr class="rule">
+
+    <section class="grid">
+      <article class="card wide">
+        <h2>What this project demonstrates</h2>
+        <p>It is not a black-box trading bot. It is an evidence trail: every daily, weekly, monthly and quarterly output carries source status, cache usage, proxy flags and model boundaries.</p>
+      </article>
+      <article class="card wide">
+        <h2>Research boundary</h2>
+        <p>When the data-quality gate fails, outputs are automatically downgraded to valuation anchor, observation or alert. Daily signals are treated as deviation alerts only.</p>
+      </article>
+
+      <article class="card third"><div class="number">2</div><p>Covered companies: Chalco (601600.SH) and Zijin Mining (601899.SH).</p></article>
+      <article class="card third"><div class="number">3×</div><p>Frequency layers: monthly valuation anchor, weekly trading observation and daily gap alert.</p></article>
+      <article class="card third"><div class="number">0</div><p>No raw downloaded market data or private model artifacts are required in the public demo.</p></article>
+
+      <section class="flow">
+        <h2>Pipeline shape</h2>
+        <div class="steps">
+          <div class="step"><b>01 — Acquire</b><span>Fetch equities, futures, macro data, filings and production disclosures.</span></div>
+          <div class="step"><b>02 — Audit</b><span>Record source, freshness, parse confidence, proxy use and missing fields.</span></div>
+          <div class="step"><b>03 — Evaluate</b><span>Build factor layers and valuation ranges for both companies.</span></div>
+          <div class="step"><b>04 — Guardrail</b><span>Quality gates decide whether outputs are valuation, observation or alert only.</span></div>
+        </div>
+      </section>
+
+      <article class="card full links">
+        <h2>Demo reports to open</h2>
+        <table>
+          <tr><th>Report</th><th>What to show</th><th>Link</th></tr>
+          <tr><td>Latest decision table</td><td>One-screen summary of company, model, price zone, signal status and data-quality downgrade.</td><td><a href="reports/v2_latest_decision_table.md">Open report</a></td></tr>
+          <tr><td>Daily alert</td><td>Daily market snapshot and gap alert. It is intentionally not a standalone tradable signal.</td><td><a href="reports/v2_daily_alert.md">Open report</a></td></tr>
+          <tr><td>Data quality gate</td><td>Why the system refuses to promote weak data into a trading signal.</td><td><a href="reports/v2_data_quality_gate.md">Open report</a></td></tr>
+          <tr><td>Factor lineage</td><td>Where each factor comes from, whether it is real, cached, proxy or blocked.</td><td><a href="reports/v2_factor_data_lineage.md">Open report</a></td></tr>
+          <tr><td>Frequency use case</td><td>Why monthly, weekly and daily layers serve different purposes.</td><td><a href="reports/v2_chalco_frequency_use_case_summary.md">Open report</a></td></tr>
+        </table>
+      </article>
+
+      <p class="principle">Better to label a field CACHE, PROXY or BLOCKED than to manufacture certainty from missing data.</p>
+
+      <article class="card full">
+        <h2>Important disclaimer</h2>
+        <div class="warning">This repository is a research and portfolio demo. It is not investment advice and does not produce standalone tradable signals. Public pages intentionally exclude local raw datasets, credentials and private runtime artifacts.</div>
+      </article>
+    </section>
+
+    <footer><p>Built for transparent, reproducible equity research.</p><p>Python · pandas · quality gates · GitHub Actions</p></footer>
+  </main>
+</body>
+</html>
