@@ -1,7 +1,5 @@
-﻿name: Quarterly Fundamental Update
+name: Quarterly Fundamental Update
 on:
-  schedule:
-    - cron: "00 12 * * 1"
   workflow_dispatch:
 permissions:
   contents: write
@@ -39,6 +37,6 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add data reports models
+          git add reports
           git commit -m "quarterly fundamentals update" || echo "No changes"
           git push

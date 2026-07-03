@@ -1,7 +1,5 @@
-﻿name: Monthly Valuation Update
+name: Monthly Valuation Update
 on:
-  schedule:
-    - cron: "30 11 1 * *"
   workflow_dispatch:
 permissions:
   contents: write
@@ -34,6 +32,6 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add data reports
+          git add reports
           git commit -m "monthly valuation update" || echo "No changes"
           git push
