@@ -9,11 +9,33 @@ import json
 import os
 import re
 import time
+from contextlib import contextmanager
 from datetime import datetime
 from pathlib import Path
+from urllib.parse import urlparse
 from typing import Any
 
 import requests
+
+
+
+def _load_local_env_files() -> None:
+    """Load .env.local/.env for direct local CLI usage without overriding env vars."""
+    for env_path in (Path(".env.local"), Path(".env")):
+        if not env_path.exists():
+            continue
+        for raw in env_path.read_text(encoding="utf-8-sig", errors="ignore").splitlines():
+            line = raw.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            key, value = line.split("=", 1)
+            key = key.strip()
+            value = value.strip().strip('"').strip("'")
+            if key and key not in os.environ:
+                os.environ[key] = value
+
+
+_load_local_env_files()
 
 REPORT_DIR = Path("reports")
 LOG_CSV = REPORT_DIR / "feishu_notify_log.csv"
@@ -43,6 +65,25 @@ def build_feishu_sign(timestamp: str, secret: str) -> str:
             digestmod=hashlib.sha256,
         ).digest()
     ).decode("utf-8")
+
+
+@contextmanager
+def _without_unreachable_loopback_proxy():
+    """Temporarily bypass the known-dead local proxy used by some shells."""
+    proxy_keys = ("ALL_PROXY", "HTTP_PROXY", "HTTPS_PROXY", "GIT_HTTP_PROXY", "GIT_HTTPS_PROXY")
+    removed = {}
+    for key in proxy_keys:
+        value = os.environ.get(key)
+        if not value:
+            continue
+        parsed = urlparse(value)
+        if parsed.hostname in {"127.0.0.1", "localhost", "::1"} and parsed.port == 9:
+            removed[key] = value
+            os.environ.pop(key, None)
+    try:
+        yield
+    finally:
+        os.environ.update(removed)
 
 
 def _keyword_title(title: str) -> str:
@@ -91,7 +132,8 @@ def post_feishu_text(text: str) -> dict:
         payload["sign"] = build_feishu_sign(timestamp, secret)
 
     try:
-        response = requests.post(webhook, json=payload, timeout=15)
+        with _without_unreachable_loopback_proxy():
+            response = requests.post(webhook, json=payload, timeout=15)
         send_status = "sent" if 200 <= response.status_code < 300 else "failed"
         error_message = "" if send_status == "sent" else _redact_error(response.text)
         return {
