@@ -46,12 +46,14 @@ try {
     switch ($Type) {
         "daily" {
             Run-Step "src.update_daily_market"
+            Run-Step "src.refresh_latest_predictions"
             Run-Step "src.v2_data_quality_gate"
             Run-Step "src.v2_latest_decision_table"
             Run-Step "src.v2_model_update_log"
         }
         "weekly" {
             Run-Step "src.update_daily_market"
+            Run-Step "src.refresh_latest_predictions"
             Run-Step "src.update_weekly_signal"
             Run-Step "src.v2_data_quality_gate"
             Run-Step "src.v2_latest_decision_table"
@@ -59,6 +61,7 @@ try {
         }
         "monthly" {
             Run-Step "src.update_daily_market"
+            Run-Step "src.refresh_latest_predictions"
             Run-Step "src.update_monthly_valuation"
             Run-Step "src.v2_data_quality_gate"
             Run-Step "src.v2_latest_decision_table"
@@ -66,6 +69,7 @@ try {
         }
         "quarterly" {
             Run-Step "src.update_quarterly_fundamentals"
+            Run-Step "src.refresh_latest_predictions"
             Run-Step "src.v2_data_gap_dashboard"
             Run-Step "src.v2_data_quality_gate"
             Run-Step "src.v2_latest_decision_table"

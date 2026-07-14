@@ -1,4 +1,4 @@
-﻿# Local update + Feishu notification
+# Local update + Feishu notification
 
 GitHub Actions scheduled updates are disabled. The intended production flow is now local-first:
 
@@ -50,3 +50,7 @@ python -m src.notify_feishu --type test
 ```
 
 If `FEISHU_WEBHOOK_SET=False`, the local environment did not load the webhook.
+
+## Prediction refresh behavior
+
+The local runner now calls `python -m src.refresh_latest_predictions` after market data refresh. This rebuilds daily/weekly/monthly V2 market layers, refreshes Chalco V2.2/V2.3 and Zijin V2.1 latest prediction files, rewrites the daily alert, and writes `reports/v2_latest_prediction_refresh_audit.md`. It does not promote daily alerts into tradable signals.
